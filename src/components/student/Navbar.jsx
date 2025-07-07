@@ -5,7 +5,7 @@ import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 import { AppContext } from "../../context/AppContext";
 
 const Navbar = () => {
-  const { navigate } = useContext(AppContext);
+  const { navigate, isEducator } = useContext(AppContext);
   const isCourseListPage = location.pathname.includes("/course-list");
   const { openSignIn } = useClerk();
   const { user } = useUser();
@@ -19,15 +19,15 @@ const Navbar = () => {
       <img
       onClick={() => navigate('/')}
         src="https://www.skillzen.com/w/v1.3/img/logo_and_name-white.png"
-        alt="Logo"
+        alt="logo"
         className="w-28 lg:w-32 cursor-pointer"
       />
       <div className="hidden md:flex items-center gap-5 text-gray-500">
         <div className="flex items-center gap-5">
           {user && (
             <>
-              <button>Become Educator</button>|{" "}
-              <Link to="/my-enrollments">My Enrollments</Link>{" "}
+              <button onClick={() => navigate('/educator')}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>|
+              <Link to="/my-enrollments">My Enrollments</Link>
             </>
           )}
         </div>
@@ -47,8 +47,8 @@ const Navbar = () => {
         <div className="flex items-center gap-1 sm:gap-2 max-sm:text-xs">
           {user && (
             <>
-              <button>Become Educator</button>|{" "}
-              <Link to="/my-enrollments">My Enrollments</Link>{" "}
+              <button onClick={() => navigate('/educator')}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>
+              <Link to="/my-enrollments">My Enrollments</Link>
             </>
           )}
         </div>
