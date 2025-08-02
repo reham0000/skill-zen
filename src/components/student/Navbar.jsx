@@ -27,7 +27,7 @@ const Navbar = () => {
           {user && (
             <>
               <button onClick={() => navigate('/educator')}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>|
-              <Link to="/my-enrollments">My Enrollments</Link>
+              <Link to="/my-enrollments">My  Enrollments</Link>
             </>
           )}
         </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
             onClick={() => openSignIn()}
             className="bg-blue-600 text-white px-5 py-2 rounded-full"
           >
-            Create Account
+            Create Accounts
           </button>
         )}
       </div>
