@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:items-start items-center w-full">
           <img
             className="h-8"
-            src="https://www.skillzen.com/w/v1.3/img/logo_and_name-white.png"
+            src="https://skillzen.com/w/v1.3/img/logo_and_name-white.png"
             alt="logo"
           />
           <p className="mt-6 text-center md:text-left text-sm text-white/80">

@@ -18,7 +18,7 @@ const Navbar = () => {
     >
       <img
       onClick={() => navigate('/')}
-        src="https://www.skillzen.com/w/v1.3/img/logo_and_name-white.png"
+        src="https://skillzen.com/w/v1.3/img/logo_and_name-white.png"
         alt="logo"
         className="w-28 lg:w-32 cursor-pointer"
       />
